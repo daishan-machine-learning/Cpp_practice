@@ -87,8 +87,17 @@ IO类中的继承关系是:
 |fstrm.close()|关闭与fstrm绑定的文件|
 |fstrm.is_open()|返回bool值，判断与fstrm关联的文件是否成功打开且尚未关闭|
 
+```c++
+ifstream in(ifile); // 构造一个关联ifile文件的文件流
+ofstream out;  //输出文件流未关联到任何文件
+out.open(ofile); // 输出文件流关联到一个输出文件，如果open失败，failbit会被置位
+if(out){
+    //执行一系列操作
+}
+```
+**Note:由于fstream是继承iostream的，所以在以iostream& 作为参数或者返回类型的情况下，可以传递fstream的对象。**
 
-    
+
 ### 顺序容器
 ### 泛型算法
 ### 关联容器
