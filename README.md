@@ -109,6 +109,7 @@ if(out){
 |ate|打开文件后立即定位到文件末尾|
 |trunc|截断文件|
 |binar|以二进制方式打开文件|
+
 指定文件模式的限制：
 + out只适用于 ofstream 和 fstream
 + in只适用于ifstream 和 fstream
