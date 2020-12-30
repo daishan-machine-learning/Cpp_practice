@@ -44,6 +44,14 @@ int main1(){
     return 0;
 }
 int main(){
-    
+    //测试文件模式
+    ofstream os;   //隐含模式为输出和截断
+    string filename = "D:\\Cpp_practice\\test.txt"; 
+    os.open(filename,ofstream::out|ofstream::app);
+    if(!os.fail()){
+        os<<"change";
+        os.close();
+    }
+   
 
 }
